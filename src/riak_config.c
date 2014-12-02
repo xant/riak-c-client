@@ -59,10 +59,11 @@ riak_config_new(riak_config      **config,
     cfg->free_fn      = free_fn;
     cfg->pb_allocator = NULL;
     if (pb_alloc != NULL && pb_free != NULL) {
-        cfg->pb_allocator = &protobuf_c_default_allocator;
-        cfg->pb_allocator->alloc = pb_alloc;
-        cfg->pb_allocator->tmp_alloc = pb_alloc;
-        cfg->pb_allocator->free = pb_free;
+        // TODO update to new api
+        //cfg->pb_allocator = &protobuf_c_default_allocator;
+        //cfg->pb_allocator->alloc = pb_alloc;
+        //cfg->pb_allocator->tmp_alloc = pb_alloc;
+        //cfg->pb_allocator->free = pb_free;
     }
     cfg->log_data        = NULL;
     cfg->log_fn          = NULL;
